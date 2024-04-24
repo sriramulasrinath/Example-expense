@@ -47,7 +47,7 @@ dnf install mysql -y &>>$LOGFILE
 VALIDATE $? "Installing mysql client"
 
 
-mysql -h 172.31.85.201 -uroot -p${mysql_root_password} < /app/schema/backend.sql &>>$LOGFILE
+mysql -h 172.31.92.2 -uroot -p${mysql_root_password} < /app/schema/backend.sql &>>$LOGFILE
 VALIDATE $? "Schema Loading"
 
 
