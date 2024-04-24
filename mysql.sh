@@ -1,3 +1,9 @@
+set -e
+handle_error(){
+    echo "Error occured at line number: $1, error command: $2"
+}
+
+trap 'handle_error ${LINENO} "$BASH_COMMAND"' ERR
 
 source ./common.sh
 check_root
